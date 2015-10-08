@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="BContent-Type" BContent="text/html; charset=utf-8" />
+		<title>2RB {$series}  {$Think.lang.LIST_SERIES} {$Think.lang.COVER_SUCTION_RING_BLOWER}</title>
+		<meta name="keywords" 	BContent="{$Think.lang.PROD_COMMON_KEYWORD}" />
+		<meta name="description"	BContent="{$Think.lang.PROD_COMMON_BContent}" />
+		<include file="../Public/css" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<include file="../Public/header" />
+	<!-- 应用内容 -->
+	<div class="container-fuild">
+		<div class="container pro">
+			<!-- 应用内容 -->
+			<img src="{$Think.lang.SRC_LAN}/product_banner.jpg" class="banner" />
+			<div class="row">
+				<div class="col-md-3">
+					<include file="../Public/pro-nav" />
+				</div>
+				<div class="col-md-9 split">
+					<div class="BContent">
+						<h3 class="title-1">IE2 <?php echo  $_GET['series'];?> {$Think.lang.LIST_ORDER&PERFOR}</h3>
+						<table id="proList"  class="table table-striped table-hover">
+							<caption><h1></h1></caption>
+							<include file="../Public/data-hd" />
+							<tbody>
+								<volist name="list" id="vo">
+								<tr data-href="{$Think.config.PROD_ROOT}/BContent?series={$vo.type}&output={$vo.output}">
+									<td>{$vo.type}</td>
+									<td>{$vo.fre_quency}</td>
+									<td>{$vo.output}</td>
+									<td>{$vo.maximum_airflow}</td>
+									<td>{$vo.maximum_vacuum}</td>
+									<td>{$vo.maximum_pressure}</td>
+								</tr>
+								</volist>
+							</tbody>
+							<tfoot>
+							<tr>
+								<td colspan=6>
+									<p>
+										<a class="link-1" href="{$Think.lang.SRC_LAN}/2rb_{$series}.pdf" target="_blank" >
+											<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+											<span>{$Think.lang.LIST_DOWNLOAD} {$Think.lang.COVER_SUCTION_RING_BLOWER} 2RB {$series}  {$Think.lang.LIST_SERIES}</span>
+										</a>
+									</p>
+								</td>
+							</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 应用内容end -->
+	<include file="../Public/footer" />
+	<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/prodList" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

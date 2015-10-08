@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+<?php require 'setLan.php';?>
+<title>{$Think.lang.INDEX_TITLE}</title>
+<meta name="keywords" content="{$Think.lang.INDEX_KEYWORDS}" />
+<meta name="description" content="{$Think.lang.INDEX_DESCRIPTION}" />
+<?php require 'inc/css.inc';?>
+<link href="favicon.ico" rel="shortcut icon"/>
+</head>
+<body >
+
+<?php require 'inc/header_inc.php';?>
+
+<div class="container">
+  <div class="flash-wrap">
+       <div id="cu3erSwf"></div>
+  </div>
+   <div id="sildeContainer">
+   		<img class="flash-shadow" src="{$Think.config.IMG_ROOT}/bg_shadow.png"/>
+   		<div id="sliderWrap">
+			<a class="slider-item first" href="about_us.php" >
+				<img src="{$Think.lang.SRC_LAN}/home2.jpg"/>
+			</a>
+			<a class="slider-item second" href="Side_Channel_Blower_3RB_Single_Stage.php" >
+				<img src="{$Think.lang.SRC_LAN}/home4.jpg" />
+			</a>
+			<a class="slider-item last"  href="Download.php">
+				<img src="{$Think.lang.SRC_LAN}/home3.jpg" />
+			</a>
+			<a id="prev" href="javascript:void(0)">
+				<img src="{$Think.config.IMG_ROOT}/prev.jpg" />
+			</a>
+			<a id="next" href="javascript:void(0)">
+				<img src="{$Think.config.IMG_ROOT}/next.jpg" />
+			</a>
+		</div>
+   </div>
+</div>
+<input id="swfConfig" type="hidden"  value="{$Think.lang.SRC_LAN}/config.xml">
+<?php require 'inc/footer_inc.php';?>
+<script src="{$Think.config.JS_ROOT}/swfobject.js"></script>
+<script src="{$Think.config.JS_ROOT}/index.js"></script>
+</body>
+</html>
+

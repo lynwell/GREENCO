@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<title>{$Think.lang.RELIEF_TITLE}</title>
+		<meta name="keywords"	 content="{$Think.lang.RELIEF_DESCRIPTION}" />
+		<meta name="description" content="{$Think.lang.RELIEF_KEYWORDS}" />
+		<include file="../Public/css" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<include file="../Public/header" />
+	<!-- 应用内容 -->
+	<div class="container-fuild">
+		<div class="container pro">
+			<img src="{$Think.lang.SRC_LAN}/product_banner.jpg" class="banner" />
+			<div class="row">
+				<div class="col-md-3">
+					<include file="../Public/pro-nav" />
+				</div>
+				<div class="col-md-9 split">
+					<div class="row pro-list content">
+						<div class="row">
+							<div class="col-md-5">
+								<p class="center">
+									<img src="{$Think.config.IMG_ROOT}/Relief_Valve_{$type}.jpg"
+									alt="{$list.type} side channel blower silencer image and picture" />
+								</p>
+							</div>
+							<div class="col-md-7">
+								<form class="form-inline" action="#">
+									<ul class="prod-detail">
+										<li>
+											<h3 class="title-1">{$Think.lang.HEADER_RELIEF_VALUE} {$list.type} {$Think.lang.CONTENT_TECHNICAL_DATA}</h3>
+										</li>
+										<li><strong>{$Think.lang.CONTENT_MODEL}: </strong> <span> {$list.type}</span></li>
+										<li>
+											<div class="form-group">
+												<label for="inputEmail3" class="control-label">数量：</label> <span
+											class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+											<input type="text" class="form-control" style="width: 40px"
+											placeholder="1"> <span
+											class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</div>
+									</li>
+									<li>
+										<button class="btn btn-default" type="submit">
+										<span class="glyphicon glyphicon-shopping-cart"
+										aria-hidden="true"></span> 加入询价单
+										</button>
+									</li>
+									<li><if condition="($list.type eq 'RV-01') OR ($list.type eq 'RV-02')">
+									<a href="{$Think.lang.SRC_LAN}/ReliefValve.pdf"
+										target="_blank" class="link-1"> 
+										<else /><a href="{$Think.lang.SRC_LAN}/ReliefValve2BX4.pdf"
+										target="_blank" class="link-1"> </if><span
+										class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+										
+										<span>Download PDF Relief Valve</span>
+									</a></li>
+								</ul>
+							</form>
+						</div>
+					</div>
+					<div>
+						<h3 class="head-1">{$Think.lang.CONTENT_RELIEF_VALVE_DIMENSION} </h3>
+						<p class="center">
+							<a rel="shadowbox"
+								href="{$Think.config.IMG_ROOT}/Relief_valve_{$subType}_big.jpg">
+								<img alt="Dimension for Silencer '.$_rows['type'].' "
+								class="border"
+								src="{$Think.config.IMG_ROOT}/Relief_valve_{$subType}_small.jpg"
+								title="Click to Enlarge" />
+							</a>
+						</p>
+						<table class="table table-striped" >
+							<if condition="$subType eq 'RV'"> 
+							<tr class="one">
+								<td>Model</td>
+								<td>MPaG</td>
+								<td>a</td>
+								<td>b</td>
+								<td>c</td>
+								<td>d</td>
+								<td>e</td>
+								<td>f</td>
+								<td>g</td>
+							</tr>
+							<tr>
+								<td>{$list.type}</td>
+								<td>{$list.mpag}</td>
+								<td>{$list.a}</td>
+								<td>{$list.b}</td>
+								<td>{$list.c}</td>
+								<td>{$list.d}</td>
+								<td>{$list.e}</td>
+								<td>{$list.f}</td>
+								<td>{$list.g}</td>
+							</tr>
+							<else />
+							<tr class="one">
+								<td>Model</td>
+								<td>A</td>
+								<td>ϕB</td>
+								<td>C</td>
+								<td>D</td>
+								<td>E</td>
+							</tr>
+							<tr>
+								<td>{$list.type}</td>
+								<td>{$list.a}</td>
+								<td>{$list.b}</td>
+								<td>{$list.c}</td>
+								<td>{$list.d}</td>
+								<td>{$list.e}</td>
+							</tr>
+							</if>
+						</table>
+					</div>
+					<p class="notice">{$Think.lang.CONTENT_NOTICE}</p>
+				</div>
+				<!-- 尺寸图判断 -->
+				<!-- 技术参数判断 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 应用内容end -->
+<include file="../Public/footer" />
+<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/prod" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

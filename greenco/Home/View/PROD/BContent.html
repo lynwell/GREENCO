@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+        <title>        <?php echo $_GET[ 'series'];?>        {$Think.lang.COVER_SUCTION_RING_BLOWER}        </title>
+        <meta name="description" content="<?php echo _('Greenco Side channel blower,Regenerative blower,Ring blower with NSK,SKF bearing high temperaturer grease,The world leader in manufacturer,export to more than 100 countries by Greenco.'); ?>" />
+        <meta name="keywords" content="<?php echo _('Side channel blower,Regenerative blower,Ring blower,Air blower,Vacuum pump,single stage,double stage,multi stage blower,2RB,3RB,4RB series,GREENCO'); ?>" />
+        <include file="../Public/css" />
+        <link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+    </head>
+    <include file="../Public/header" />
+    <!-- 应用内容 -->
+    <div class="container-fuild">
+        <div class="container pro">
+            <img src="{$Think.lang.SRC_LAN}/product_banner.jpg" class="banner" />
+            <div class="row">
+                <div class="col-md-3">
+                    <include file="../Public/pro-nav" />
+                </div>
+                <div class="col-md-9 split content">
+                    <h3 class="title-3">{$list.type} {$Think.lang.CONTENT_TECHNICAL_DATA}</h3>
+                    <div class="row pro-list">
+                        
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="center">
+                                    <img src="{$Think.config.IMG_ROOT}/{$list.subtype}.jpg" alt="{$list.type} side channel blower image and picture" />
+                                </p>
+                            </div>
+                            <div class="col-md-7">
+                                <ul class="row prod-data">
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_MODEL}:</strong>
+                                        <span> {$list.type}</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_STAGE}:</strong>
+                                        <if condition="$list.stage eq 'Single'">
+                                        <span> {$Think.lang.PROD_SINGLE_STAGE}</span>
+                                        <elseif condition="$list.stage eq 'Double'"/>
+                                        <span> {$Think.lang.PROD_DOUBLE_STAGE}</span>
+                                        <else />
+                                        <span> {$Think.lang.PROD_THREE_STAGE}</span>
+                                        </if>
+                                        
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_FREQ}:</strong>
+                                        <span> Fre_quency(Hz)</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_POWER}:</strong>
+                                        <span> {$list.output} (Kw)</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_AIRFLOW}:</strong>
+                                        <span> {$list.maximum_airflow} (m³/h)</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_TH&CL}:</strong>
+                                        <span>IP55</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_PRESSURE}:</strong>
+                                        <span> {$list.maximum_pressure} (mbar)</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_IN&CL}:</strong>
+                                        <span> F or H</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_VACUUM}:</strong>
+                                        <span>{$list.maximum_vacuum} (mbar)</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_WEIGHT}:</strong>
+                                        <span>{$list.weight}</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_INLET/OUTLET}:</strong>
+                                        <span>{$list['inlet_outlet']}</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_SOUND}:</strong>
+                                        <span>{$list.sound_level}</span>
+                                    </li>
+                                    <li class="col-md-6">
+                                        <strong>{$Think.lang.CONTENT_DIMENSION}(L*W*H):</strong>
+                                        <span>{$list.sound_level}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="head-1">{$Think.lang.CONTENT_DIMENSION} </h3>
+                            <p class="center">
+                                <a rel="shadowbox" href="{$Think.config.IMG_ROOT}/Inlet_Vacuum_Filter_big.jpg">
+                                    <img alt="Dimension for Silencer '.$_rows['type'].' " class="border" src="{$Think.config.IMG_ROOT}/{$list.dimension}_small.jpg" title="Click to Enlarge" />
+                                </a>
+                            </p>
+                            <ul class="prod-row clearfix">
+                                <li>
+                                    <div class="hd">Type</div>
+                                    <div class="dt">{$list.type}</div>
+                                </li>
+                                <li>
+                                    <div class="hd">Phases</div>
+                                    <div class="dt">{$list.phases}</div>
+                                </li>
+                                <if condition="$list.a neq '' ">
+                                <li>
+                                    <div class="hd">A</div>
+                                    <div class="dt">{$list.a}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.a1 neq '' ">
+                                <li>
+                                    <div class="hd">A′</div>
+                                    <div class="dt">{$list.a1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.b neq '' ">
+                                <li>
+                                    <div class="hd">B</div>
+                                    <div class="dt">{$list.b}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.c neq '' ">
+                                <li>
+                                    <div class="hd">C</div>
+                                    <div class="dt">{$list.c}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.c1 neq '' ">
+                                <li>
+                                    <div class="hd">C′</div>
+                                    <div class="dt">{$list.c1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.c2 neq '' ">
+                                <li>
+                                    <div class="hd">C′′</div>
+                                    <div class="dt">{$list.c2}</div>
+                                </li>
+                                </if>
+                                
+                                <if condition="$list.d neq '' ">
+                                <li>
+                                    <div class="hd">D</div>
+                                    <div class="dt">{$list.d}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.e neq '' ">
+                                <li>
+                                    <div class="hd">E</div>
+                                    <div class="dt">{$list.e}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.f neq '' ">
+                                <li>
+                                    <div class="hd">F</div>
+                                    <div class="dt">{$list.f}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.f1 neq '' ">
+                                <li>
+                                    <div class="hd">F′</div>
+                                    <div class="dt">{$list.f1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.f11 neq '' ">
+                                <li>
+                                    <div class="hd">F"</div>
+                                    <div class="dt">{$list.f11}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.g neq '' ">
+                                <li>
+                                    <div class="hd">G</div>
+                                    <div class="dt">{$list.g}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.h neq '' ">
+                                <li>
+                                    <div class="hd">H</div>
+                                    <div class="dt">{$list.h}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.h1 neq '' ">
+                                <li>
+                                    <div class="hd">H′</div>
+                                    <div class="dt">{$list.h1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.j neq '' ">
+                                <li>
+                                    <div class="hd">J</div>
+                                    <div class="dt">{$list.j}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.k neq '' ">
+                                <li>
+                                    <div class="hd">K</div>
+                                    <div class="dt">{$list.k}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.l neq '' ">
+                                <li>
+                                    <div class="hd">L</div>
+                                    <div class="dt">{$list.l}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.m neq '' ">
+                                <li>
+                                    <div class="hd">M</div>
+                                    <div class="dt">{$list.m}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.n neq '' ">
+                                <li>
+                                    <div class="hd">N</div>
+                                    <div class="dt">{$list.n}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.o neq '' ">
+                                <li>
+                                    <div class="hd">O</div>
+                                    <div class="dt">{$list.o}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.p neq '' ">
+                                <li>
+                                    <div class="hd">P</div>
+                                    <div class="dt">{$list.p}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.p1 neq '' ">
+                                <li>
+                                    <div class="hd">P′</div>
+                                    <div class="dt">{$list.p1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.q neq '' ">
+                                <li>
+                                    <div class="hd">Q</div>
+                                    <div class="dt">{$list.q}</div>
+                                </li>
+                                </if>
+                                <if condition="$list['ϕr'] neq '' ">
+                                <li>
+                                    <div class="hd">ϕR</div>
+                                    <div class="dt">{$list["ϕr"]}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.s neq '' ">
+                                <li>
+                                    <div class="hd">S</div>
+                                    <div class="dt">{$list.s}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.s1 neq '' ">
+                                <li>
+                                    <div class="hd">S1</div>
+                                    <div class="dt">{$list.s1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.s2 neq '' ">
+                                <li>
+                                    <div class="hd">S2</div>
+                                    <div class="dt">{$list.s2}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.s3 neq '' ">
+                                <li>
+                                    <div class="hd">S3</div>
+                                    <div class="dt">{$list.s3}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.t neq '' ">
+                                <li>
+                                    <div class="hd">T</div>
+                                    <div class="dt">{$list.t}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.t1 neq '' ">
+                                <li>
+                                    <div class="hd">T1</div>
+                                    <div class="dt">{$list.t1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.u neq '' ">
+                                <li>
+                                    <div class="hd">U</div>
+                                    <div class="dt">{$list.u}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.v neq '' ">
+                                <li>
+                                    <div class="hd">V</div>
+                                    <div class="dt">{$list.v}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.v1 neq '' ">
+                                <li>
+                                    <div class="hd">V1</div>
+                                    <div class="dt">{$list.v1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.v2 neq '' ">
+                                <li>
+                                    <div class="hd">V2</div>
+                                    <div class="dt">{$list.v2}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.v3 neq '' ">
+                                <li>
+                                    <div class="hd">V<span>1(3-)</span></div>
+                                    <div class="dt">{$list.v3}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.v3_ neq '' ">
+                                <li>
+                                    <div class="hd">V′<span>1(3-)</span></div>
+                                    <div class="dt">{$list.v3_}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.w neq '' ">
+                                <li>
+                                    <div class="hd">W</div>
+                                    <div class="dt">{$list.w}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.w1 neq '' ">
+                                <li>
+                                    <div class="hd">W1</div>
+                                    <div class="dt">{$list.w1}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.w2 neq '' ">
+                                <li>
+                                    <div class="hd">W2</div>
+                                    <div class="dt">{$list.w2}</div>
+                                </li>
+                                </if>
+                                <if condition="$list['ϕx'] neq '' ">
+                                <li>
+                                    <div class="hd">ϕX</div>
+                                    <div class="dt">{$list["ϕx"]}</div>
+                                </li>
+                                </if>
+                                <if condition="$list.y_z neq '' ">
+                                <li>
+                                    <div class="hd">Y_Z</div>
+                                    <div class="dt">{$list.y_z}</div>
+                                </li>
+                                </if>
+                                <if condition="$list['x_holes'] neq '' ">
+                                <li>
+                                    <div class="hd">X-Holes</div>
+                                    <div class="dt">{$list['x_holes']}</div>
+                                </li>
+                                </if>
+                                
+                                
+                            </ul>
+                        </div>
+                        <p class="notice">{$Think.lang.CONTENT_NOTICE}</p>
+                        <!-- 尺寸图判断 -->
+                    </div>
+                </div>
+                <div >
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="../Public/footer" />
+    <script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/prod" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

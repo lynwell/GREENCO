@@ -1,0 +1,96 @@
+<h3 class="head-1">{$Think.lang.HEADER_SIDE_CHANNEL_BLOWER}</h3>
+<ul class="pro-nav">
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=2RB&type=ie1&stage=Single">{$Think.lang.HEADER_2RB_SINGLE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=2RB&type=ie1&stage=Double">{$Think.lang.HEADER_2RB_DOUBLE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=3RB&type=ie1&stage=Single" style="background:url({$Think.config.IMG_ROOT}/new.gif) no-repeat 222px -2px;display:block;">{$Think.lang.HEADER_3RB_SINGLE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=3RB&type=ie1&stage=Double" style="background:url({$Think.config.IMG_ROOT}/new.gif) no-repeat 222px -2px;display:block;">{$Think.lang.HEADER_3RB_DOUBLE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=3RB&type=ie1&stage=Three" style="background:url({$Think.config.IMG_ROOT}/new.gif) no-repeat 222px -2px;display:block;">{$Think.lang.HEADER_3RB_THREE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=4RB&type=ie1&stage=Single">{$Think.lang.HEADER_4RB_SINGLE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=4RB&type=ie1&stage=Double">{$Think.lang.HEADER_4RB_DOUBLE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=4RB&type=ie1&stage=Three">{$Think.lang.HEADER_4RB_THREE} </a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/Belt_2RB_1">{$Think.lang.HEADER_2RB_SINGLE_BELT}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/Belt_2RB_2">{$Think.lang.HEADER_2RB_DOUBLE_BELT}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=2RB&type=ie2&stage=Single">{$Think.lang.HEADER_2RB_SINGLE_REGENERATIVE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/getProd.html?model=2RB&type=ie2&stage=Double">{$Think.lang.HEADER_2RB_DOUBLE_REGENERATIVE}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.PROD_ROOT}/Suction" style="background:url({$Think.config.IMG_ROOT}/new.gif) no-repeat 154px -2px;display:block;">{$Think.lang.HEADER_COVER_SUCTION}</a></li>
+	</ul>
+	<h3 class="head-1">{$Think.lang.FOOTER_ACCESSORIES}</h3>
+	<ul class="pro-nav">
+		<li>
+			<a class="link-3" href="{$Think.config.PROD_ROOT}/Silencer">{$Think.lang.HEADER_SILENCER}</a>
+		</li>
+		<li>
+			<a class="link-3" href="{$Think.config.PROD_ROOT}/Relief">{$Think.lang.HEADER_RELIEF_VALUE}</a>
+		</li>
+		<li>
+			<a class="link-3" href="{$Think.config.PROD_ROOT}/Filter">{$Think.lang.HEADER_FILTER}</a>
+		</li>
+	</ul>
+	<h3 class="head-1">{$Think.lang.NAV_SEARCH_PRODUCT}
+		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	</h3>
+	<form id="searchForm" role="form" class="search-bar" action="{$Think.config.PROD_ROOT}/Search" method="get">
+		<div class="form-group">
+			<label for="type" class="control-label ">1:{$Think.lang.NAV_SEARCH_SELECT_GRAPH}</label>
+			<select name="type" class="form-control">
+				<option value="maximum_vacuum">{$Think.lang.HEADER_VACUUM}</option>
+				<option value="maximum_pressure">{$Think.lang.HEADER_PRESSURE}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="airFlow" class="control-label">2:{$Think.lang.NAV_SEARCH_AIR_FLOW}(e.g.120):</label>
+			<div class="row">
+				<div class="col-md-6">
+					<input id="airFlow" check-type="number"  name="airFlow" type="text" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<select class="form-control">
+						<option>m³/h</option>
+						<option>m³/min</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="pressure"  class="control-label">3:{$Think.lang.NAV_SEARCH_PRESSURE}(e.g.200):</label>
+			<div class="row">
+				<div class="col-md-6">
+					<input check-type="number" id="pressure" name="pressure" type="text" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<select class="form-control">
+						<option>mbar</option>
+						<option>pa</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-default">{$Think.lang.HEADER_SEARCH}</button>
+		</div>
+	</form>

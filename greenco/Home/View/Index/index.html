@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<title>{$Think.lang.INDEX_TITLE}</title>
+		<meta name="keywords" content="{$Think.lang.INDEX_KEYWORDS}" />
+		<meta name="description" content="{$Think.lang.INDEX_DESCRIPTION}" />
+		<include file="../Public/css" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<include file="../Public/header" />
+	<div class="container-fluid content">
+		<div class="container">
+			<div class="banner-wrap">
+				<div id="slides" >
+		        		<img src="{$Think.lang.SRC_LAN}/image6.jpg" />
+		        		<img src="{$Think.lang.SRC_LAN}/image3.jpg"/>
+		        		<img src="{$Think.lang.SRC_LAN}/image4.jpg"/>
+				</div>
+			</div>
+			<div class="notice-wrap center">
+				<ul class="row">
+					<li class="col-md-4" >
+						<div>
+							<a  href="{$Think.config.ABOUT_ROOT}/aboutUs.html" >
+								<img src="{$Think.lang.SRC_LAN}/home2.jpg"/>
+							</a>
+						</div>
+					</li>
+					<li class="col-md-4" >
+						<div>
+							<a  href="{$Think.config.PROD_ROOT}/getProd?model=3RB&type=ie1&stage=Single" >
+								<img src="{$Think.lang.SRC_LAN}/home4.jpg" />
+							</a>
+						</div>
+					</li>
+					<li class="col-md-4" >
+						<div>
+							<a  href="{$Think.config.INDEX_ROOT}/download.html">
+								<img src="{$Think.lang.SRC_LAN}/home3.jpg" />
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+	</div>
+	<input id="swfConfig" type="hidden"  root="{$Think.config.SRC_ROOT}"  value="{$Think.lang.SRC_LAN}/config.xml">
+	<include file="../Public/footer" />
+	<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/index" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

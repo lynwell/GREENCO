@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<title>{$Think.lang.CONTACT_TITLE}</title>
+		<meta name="keywords" content="{$Think.lang.CONTACT_KEYWORDS}" />
+		<meta name="description"content="{$Think.lang.CONTACT_DESCRIPTION}" />
+		<include file="../Public/css" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<include file="../Public/header" />
+	<!-- 下载内容 -->
+	<div class="container-fuild">
+		<div class="container contact">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="detail">
+						<h3 class="title-2">{$Think.lang.CONTACT_DETAILS}</h3>
+						<p class="title-1">
+							{$Think.lang.CONTACT_GREENCO_COLTD}
+						</p>
+						<p>
+							<span>{$Think.lang.CONTACT_ADD}:</span>
+							{$Think.lang.CONTACT_ADDRESS}
+						</p>
+						<if condition="$Think.lang.LAN eq 'zh-cn'">
+						<volist name="list" id="vo">
+						<p class="phone text-4 hide">
+							<span>{$Think.lang.CONTACT_TELEPHONE}:</span>
+							<span>{$vo.tel} {$vo.name}</span>
+						</p>
+						</volist>
+						<else />
+						<p>Tel: 0086-576-86428999</p>
+						</if>
+						<p>
+							<span>{$Think.lang.CONTACT_FAX}:</span>
+							<span>{$Think.lang.CONTACT_FAX_NO}</span>
+						</p>
+						<p>{$Think.lang.CONTACT_EMAIL}: greenco@greenco.cn</p>
+						<p>MSN: greenco.cn@hotmail.com</p>
+						<p>
+							<span>{$Think.lang.CONTACT_WEBSITE}:</span>
+							<a href="http://www.greenco.cn">http://www.greenco.cn</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<img class="contact-left-img"  src="{$Think.config.IMG_ROOT}/contact_us.jpg"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<include file="../Public/map" />
+				</div>
+				<div class="col-md-5">
+					<div id="feedback_info">
+						<h3 class="title-1">{$Think.lang.CONTACT_Q&C}</h3>
+						<p class="text-4">
+							{$Think.lang.CONTACT_SUGGEST}
+						</p>
+						<form role="form"  id="contactForm"  method="get"  class="form-horizontal"  action="{$Think.config.Contact_ROOT}/sendEmail"  novalidate="novalidate">
+							<div class="form-group">
+								<div  class="col-sm-2 error-info">
+									<label class="control-label" for="name">{$Think.lang.CONTACT_NAME}:</label>
+								</div>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" check-type="required" id="name" name="name" placeholder="{$Think.lang.CONTACT_NAME}">
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-sm-2 error-info">
+									<label class="control-label" for="company">{$Think.lang.CONTACT_COMPANY}:</label>
+								</div>
+								<div class="col-sm-10">
+									<input type="text" name="company" class="form-control" check-type="required" id="company" placeholder={$Think.lang.CONTACT_COMPANY}>
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-sm-2 error-info">
+									<label class="control-label" for="phone">{$Think.lang.CONTACT_TELEPHONE}:</label>
+								</div>
+								<div class="col-sm-10">
+									<input type="text" name="phone" class="form-control" check-type="required" id="phone" placeholder="{$Think.lang.CONTACT_TELEPHONE}">
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-sm-2 error-info">
+									<label class="control-label" for="email">{$Think.lang.CONTACT_EMAIL}:</label>
+								</div>
+								<div class="col-sm-10">
+									<input type="email" name="email" check-type="email required"  class="form-control" id="email" placeholder="{$Think.lang.CONTACT_EMAIL}">
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-sm-2 error-info">
+									<label class="control-label" for="contnet">{$Think.lang.CONTACT_COMMENTS}:</label>
+								</div>
+								<div class="col-sm-10">
+									<textarea name="content"   class="form-control" check-type="required" rows="3" id="content" placeholder="{$Think.lang.CONTACT_COMMENTS}"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div  class="col-sm-2 error-info">
+									<label class="control-label" for="codeValue">{$Think.lang.CONTACT_CODE}:</label>
+								</div>
+								<div class="col-sm-6">
+									<img src="{$Think.config.Contact_ROOT}/Code"  id="code" class="pull-left code"/>
+									<input id="codeValue"  check-type="required"  type="text"  name="code" class="form-control pull-left"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<button type="submit"   class="btn btn-default pull-right">{$Think.lang.CONTACT_SEND}</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- set up the modal to start hidden and fade in and out -->
+<div id="emailMsg" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+		<div class="modal-body">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<span>邮件发送成功</span>
+		</div>
+      <!-- dialog buttons -->
+      <div class="modal-footer"><button type="button" class="btn btn-primary">OK</button></div>
+    </div>
+  </div>
+</div>
+ 
+ <div id="codeMsg" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+		<div class="modal-body">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<span>验证码有误</span>
+		</div>
+      <!-- dialog buttons -->
+      <div class="modal-footer"><button type="button" class="btn btn-primary">OK</button></div>
+    </div>
+  </div>
+</div>
+<!-- sometime later, probably inside your on load event callback -->
+	
+	<include file="../Public/footer" />
+	<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/contact" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

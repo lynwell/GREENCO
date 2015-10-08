@@ -1,0 +1,60 @@
+<h3 class="head-1">{$Think.lang.HEADER_ABOUT_GREENCO}</h3>
+<ul class="about-nav">
+	<li>
+		<a class="link-3" href="{$Think.config.ABOUT_ROOT}/aboutUs">{$Think.lang.HEADER_ABOUT_US}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.ABOUT_ROOT}/certification">{$Think.lang.HEADER_CERTIFICATION}</a>
+	</li>
+	<li>
+		<a class="link-3" href="{$Think.config.ABOUT_ROOT}/honour">{$Think.lang.HEADER_HONOUR}</a>
+		<li>
+			<a class="link-3" href="{$Think.config.ABOUT_ROOT}/video">{$Think.lang.HEADER_VIDEO}</a>
+		</li>
+		<li>
+			<a class="link-3" href="{$Think.config.ABOUT_ROOT}/equipments">{$Think.lang.HEADER_EQUIPMENTS}</a>
+		</li>
+	</ul>
+	<h3 class="head-1">{$Think.lang.NAV_SEARCH_PRODUCT}
+	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	</h3>
+	<form id="searchForm" role="form" class="search-bar" action="{$Think.config.PROD_ROOT}/Search" method="get">
+		<div class="form-group">
+			<label for="type" class="control-label ">1:{$Think.lang.NAV_SEARCH_SELECT_GRAPH}</label>
+			<select name="type" class="form-control">
+				<option value="maximum_vacuum">{$Think.lang.HEADER_VACUUM}</option>
+				<option value="maximum_pressure">{$Think.lang.HEADER_PRESSURE}</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="airFlow" class="control-label">2:{$Think.lang.NAV_SEARCH_AIR_FLOW}(e.g.120):</label>
+			<div class="row">
+				<div class="col-md-6">
+					<input id="airFlow" check-type="number"  name="airFlow" type="text" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<select class="form-control">
+						<option>m³/h</option>
+						<option>m³/min</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="pressure"  class="control-label">3:{$Think.lang.NAV_SEARCH_PRESSURE}(e.g.200):</label>
+			<div class="row">
+				<div class="col-md-6">
+					<input check-type="number" id="pressure" name="pressure" type="text" class="form-control">
+				</div>
+				<div class="col-md-6">
+					<select class="form-control">
+						<option>mbar</option>
+						<option>pa</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-default">{$Think.lang.HEADER_SEARCH}</button>
+		</div>
+	</form>

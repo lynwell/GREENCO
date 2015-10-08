@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<title>{$Think.lang.ABOUT_US_TITLE}</title>
+	<meta name="keywords" content=" {$Think.lang.ABOUT_US_KEYWORDS}" />
+	<meta name="description" content="{$Think.lang.ABOUT_US_DESCRIPTION}" />
+	<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+	<include file="../Public/css" />
+</head>
+<include file="../Public/header" />
+
+
+<!-- 应用内容 -->
+<div class="container-fuild">
+	<div class="container about">
+		<img src="{$Think.config.IMG_ROOT}/about_banner.png"  class="banner" />
+		<div class="row">
+			<div class="col-md-3">
+				<include file="../Public/about-nav" />
+			</div>
+			<div class="col-md-9 split">
+				<h3 class="title-1">{$Think.lang.HEADER_ABOUT_US}</h3>
+				<div class="content">
+					<p class="text-2">{$Think.lang.ABOUT_CONTENT_1}</p>
+					<div class="row center" style="margin:5px 0  5px 0;">
+						<div class="col-md-6"><img style="width:100%" src="{$Think.config.IMG_ROOT}/about_us_image2.jpg"/>
+							<p class="text-1">{$Think.lang.ABOUT_FACTORY_DONGXINQU}</p>
+						</div>
+						<div class="col-md-6">
+							<img src="{$Think.config.IMG_ROOT}/about_us_image1.jpg" style="width:100%"/>
+							<p class="text-1">{$Think.lang.ABOUT_FACTORY_SHENQIAO}</p>
+						</div>
+
+					</div>
+					<p class="text-2">{$Think.lang.ABOUT_CONTENT_2}</p>
+					<p class="text-2">{$Think.lang.ABOUT_CONTENT_3}</p>
+					<p class="text-2">{$Think.lang.ABOUT_CONTENT_4}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 应用内容end -->
+
+
+<include file="../Public/footer" />
+<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/about" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>
+

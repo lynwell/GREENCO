@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<title>{$Think.lang.FILTER_TITLE}</title>
+		<meta name="keywords"	 content="{$Think.lang.FILTER_KEYWORDS}" />
+		<meta name="description" content="{$Think.lang.FILTER_DESCRIPTION}" />
+		<include file="../Public/css" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<include file="../Public/header" />
+	<!-- 应用内容 -->
+	<div class="container-fuild">
+		<div class="container pro">
+			<img src="{$Think.lang.SRC_LAN}/product_banner.jpg" class="banner" />
+			<div class="row">
+				<div class="col-md-3">
+					<include file="../Public/pro-nav" />
+				</div>
+				<div class="col-md-9 split">
+					<div class="row pro-list content">
+						<div class="row">
+							<div class="col-md-5">
+								<p class="center">
+									<img
+									src="{$Think.config.IMG_ROOT}/Inlet vacuum filters {$type}.jpg"
+									alt="{$type}.jpg side channel blower inlet vacuum filters image and picture" />
+								</p>
+							</div>
+							<div class="col-md-7">
+								<form class="form-inline" action="#">
+									<ul class="prod-detail">
+										<li>
+											<h3 class="title-1">{$Think.lang.HEADER_FILTER} {$list.type} {$Think.lang.CONTENT_TECHNICAL_DATA}</h3>
+										</li>
+										<li><strong>{$Think.lang.CONTENT_MODEL}: </strong> <span> {$list.type}</span></li>
+										<li>
+											<div class="form-group">
+												<label for="inputEmail3" class="control-label">数量：</label> <span
+											class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+											<input type="text" class="form-control" style="width: 40px"
+											placeholder="1"> <span
+											class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</div>
+									</li>
+									<li>
+										<button class="btn btn-default" type="submit">
+										<span class="glyphicon glyphicon-shopping-cart"
+										aria-hidden="true"></span> 加入询价单
+										</button>
+									</li>
+									<li><a href="{$Think.lang.SRC_LAN}/filter.pdf"
+										target="_blank" class="link-1"> <span
+										class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+										<span>Download PDF Inlet Vacuum Filters</span>
+									</a></li>
+								</ul>
+							</form>
+						</div>
+					</div>
+					<div>
+						<h3 class="head-1">{$Think.lang.CONTENT_FILTER_DIMENSION}</h3>
+						<p class="center">
+							<a rel="shadowbox"
+								href="{$Think.config.IMG_ROOT}/Inlet_Vacuum_Filter_big.jpg">
+								<img alt="Dimension for Silencer '.$_rows['type'].' "
+								class="border"
+								src="{$Think.config.IMG_ROOT}/Inlet_Vacuum_Filter_small.jpg"
+								title="Click to Enlarge" />
+							</a>
+						</p>
+						<table class="table table-bordered table-striped">
+							<tr class="one">
+								<td style="font-style: Italic;">Type</td>
+								<td>material</td>
+								<td>FPT Inlet & Outlet</td>
+								<td>d1</td>
+								<td>d2</td>
+								<td>d3</td>
+								<td>d4</td>
+								<td>h1</td>
+								<td>h2</td>
+								<td>h3</td>
+								<td>h4</td>
+								<td>Rated Flow (m³/min)
+								</td>
+								<td>Approx.wt.(kg)</td>
+							</tr>
+							<tr>
+								<td>{$list.type}</td>
+								<td>{$list.material}</td>
+								<td>{$list.outlet}</td>
+								<td>{$list.d1}</td>
+								<td>{$list.d2}</td>
+								<td>{$list.d3}</td>
+								<td>{$list.d4}</td>
+								<td>{$list.h1}</td>
+								<td>{$list.h2}</td>
+								<td>{$list.h3}</td>
+								<td>{$list.h4}</td>
+								<td>{$list.rated_flow}</td>
+								<td>{$list.approx}</td>
+							</tr>
+						</table>
+					</div>
+					<p class="notice">{$Think.lang.CONTENT_NOTICE}</p>
+					<!-- 尺寸图判断 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 应用内容end -->
+<include file="../Public/footer" />
+<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/prod" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

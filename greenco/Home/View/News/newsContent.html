@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<title>{$Think.lang.NEW_CONTENT_INDEX}</title>
+		<meta name="description" content="{$Think.lang.NEW_CONTENT_DESCRIPTION}" />
+		<meta name="keywords" content="{$Think.lang.NEW_CONTENT_KEYWORDS}" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+		<include file="../Public/css" />
+	</head>
+	<include file="../Public/header" />
+	<!-- 应用内容 -->
+	<div class="container-fuild">
+		<div class="container support">
+			<img src="{$Think.lang.SRC_LAN}/support.jpg" class="banner" alt="Greenco side channel blower news"/>
+			<div class="row">
+				<div class="col-md-3">
+					<include file="../Public/news-nav" />
+				</div>
+				<div class="col-md-9" style="border-left: 1px solid #ccc;">
+					<h3 class="head-1">{$list.title}</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<span class="pull-left">{$list.author}</span>
+						</div>
+						<div class="col-md-6">
+							<span class="pull-right">{$list.time}</span>
+						</div>
+					</div>
+					<div class="news-content">{$list.content}</div>
+					<div  id="page_text"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 应用内容end -->
+	<include file="../Public/footer" />
+	<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/news" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>

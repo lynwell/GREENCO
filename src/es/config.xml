@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<settings>
+
+		<auto_play>
+			<defaults symbol="circular"  time="3"/><!--倒计时按钮的位置-->
+			<tweenIn x="895" y="45" width="30" height="30" tint="0xFFFFFF" alpha="0.9"/>
+			<tweenOver time="0.15"  />
+		</auto_play>
+
+		<description>
+			<defaults
+				round_corners="10, 10, 10, 10"
+				heading_text_size="22"
+				heading_text_color="0xfc9900"
+				paragraph_text_size="13"
+				paragraph_text_color="0xFFFFFF"
+			/>
+			<tweenIn x="200" y="240" width="560" height="90" alpha="0.15" />
+			<tweenOver alpha="0.3"/>
+		</description>
+
+		<transitions
+			slicing="vertical"
+			direction="down"
+			duration="0.6"
+			delay="0.2"
+		/>
+
+	</settings>
+
+
+	<slides>
+		<slide>
+			<url>../src/en/image6.jpg</url>
+		</slide>
+		<slide>
+			<url>../src/en/image1.jpg</url>
+		</slide>
+
+		<slide>
+			<url>../src/en/image2.jpg</url>
+		</slide>
+
+		<transition num="5" direction="up"   duration="1"/>
+
+		<slide>
+			<url>../src/en/image3.jpg</url>
+		</slide>
+
+		<transition num="3" direction="left" duration="1"/>
+
+		<slide>
+			<url>../src/en/image4.jpg</url>
+		</slide>
+
+		<transition  num="5" slicing="horizontal"  direction="right" duration="1.2"  delay="0.05" z_multiplier="5"/>
+
+		<slide>
+			<url>../src/en/image5.jpg</url>
+		</slide>
+
+		<transition  direction="left" />
+	</slides>
+</data>
+

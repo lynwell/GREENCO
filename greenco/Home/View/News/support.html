@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<title>{$Think.lang.SUPPORT_INDEX}</title>
+		<meta name="description" content="{$Think.lang.SUPPORT_DESCRIPTION}" />
+		<meta name="keywords" content="{$Think.lang.SUPPORT_KEYWORDS}" />
+		<link href="{$Think.config.IMG_ROOT}/favicon.ico" rel="shortcut icon"/>
+		<include file="../Public/css" />
+	</head>
+	<include file="../Public/header" />
+	<!-- 应用内容 -->
+	<div class="container-fuild">
+		<div class="container support">
+			<img src="{$Think.lang.SRC_LAN}/support.jpg"  class="banner" alt="Greenco side channel blower news"/>
+			<div class="row">
+				<div class="col-md-3">
+					<include file="../Public/news-nav"/>
+				</div>
+				<div class="col-md-9" style="border-left: 1px solid #ccc;">
+					<h3 style="color:#eee;text-indent:5px;font-size:14px;font-family:tahoma;font-family:tahoma;  text-indent: 10px; background: #666; font-size: 14px;  font-weight: 600; ;height: 32px;color: #fff;line-height: 32px;border: 1px solid #555; ">{$Think.lang.HEADER_SUPPORT}</h3>
+					<ul>
+						<volist name="list" id="vo">
+						
+						<li class="mypagination">
+							<p></p>
+							<p>
+								<strong>
+								<a href="{$Think.config.NEWS_ROOT}/newsContent.html?id={$vo.id} ">{$vo.title}</a>
+								</strong>
+							</p>
+							<p>{$vo.content}</p>
+							<p class="row">
+								<span class="more col-md-2">{$vo.time}</span>
+								<a class="more col-md-1 col-md-offset-9"  href="{$Think.config.NEWS_ROOT}/newsContent.html?id={$vo.id} ">{$Think.lang.SUPPORT_DETAIL}</a>
+							</p>
+						</li>
+						</volist>
+					</ul>
+					<div  id="page_text"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 应用内容end -->
+	<include file="../Public/footer" />
+	<script type="text/javascript"  data-main="{$Think.config.JS_ROOT}/news" src="{$Think.config.JS_ROOT}/require.js"></script>
+</body>
+</html>
